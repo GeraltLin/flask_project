@@ -3,7 +3,7 @@
 Build the image using the following command
 
 ```bash
-$ docker build -t simple-flask-app:latest .
+$ docker build -t flask_project:latest .
 ```
 
 Run the Docker container using the command shown below.
