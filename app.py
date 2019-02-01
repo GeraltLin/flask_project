@@ -1,16 +1,8 @@
-# USAGE
-# Start the server:
-# 	python run_keras_server.py
-# Submit a request via cURL:
-# 	curl -X POST -F image=@dog.jpg 'http://localhost:5000/predict'
-# Submita a request via Python:
-#	python simple_request.py
 
 # import the necessary packages
 from keras.applications import ResNet50
 from keras.preprocessing.image import img_to_array
 from keras.applications import imagenet_utils
-from keras.utils.data_utils import get_file
 from PIL import Image
 import numpy as np
 import flask
@@ -68,7 +60,6 @@ def predict():
 
 			# classify the input image and then initialize the list
 			# of predictions to return to the client
-			# print(model.summary())
 
 			with app.config["graph"].as_default():
 				preds = app.config["model"].predict(image)
